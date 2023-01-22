@@ -12,15 +12,15 @@ const AppProvider = ({children}) => {
         try {       
         const params = new URLSearchParams({...(searchTerm ? {q: searchTerm}: undefined),genres:genres , limit:24, page , order_by:"favorites", sort:"desc" })
         const response = await fetch(`${url}${params}`)
-        console.log("here's the url");
-        console.log(response);
+        /* console.log("here's the url");
+        console.log(response); */
         const Data = await response.json();
         const {data} = Data;
         if (data) { 
             const newList = data.map((item)=>{
                 const{mal_id,title,rating,episodes}=item
-                console.log("here's item");
-                console.log(item);
+                /* console.log("here's item");
+                console.log(item); */
             return {
                 id:mal_id,
                 title:title,

@@ -115,3 +115,21 @@ select{
 input{
   color:rgb(59, 57, 57);
 }
+
+ .animemenu{
+  color: #1c326a;
+  background-color: #fd7f32 ;
+  width:fit-content;
+  margin: 0.5rem 0.25rem 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+} 
+.section{
+  margin: auto;
+  margin-top: 150px;
+  width: 50%;
+  padding: 20px;
+  border: 3px solid green;
+  
+}
+/* logo orange color : #fd7f32 */
+/* logo dark color : #1f232d */

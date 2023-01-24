@@ -129,7 +129,22 @@ input{
   width: 50%;
   padding: 20px;
   border: 3px solid green;
-  
+}
+.btn{
+ width:60px;
+ height:40px;
+ background-color: #fd7f32;
+ border-radius: 10%;
+ border-color: azure;
+ color:  #1f232d;
+ font-family: fantasy;
+ font-size: large;
+ display: flex;
+ align-items: center;
+}
+.details{
+  display: flex;
+  justify-content: center;
 }
 /* logo orange color : #fd7f32 */
 /* logo dark color : #1f232d */

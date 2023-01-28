@@ -27,9 +27,7 @@ const AppProvider = ({children}) => {
                 image:item.images.jpg.image_url,
                 rating:rating,
                 episodes:episodes,
-                // genres:item.genres[0].name,
-                 
-                
+                genres:item.genres[0].name,
             }
             })
             setAnimes(newList);

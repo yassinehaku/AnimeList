@@ -13,7 +13,7 @@ const Anime = ({title,image,episodes,genres,id}) => {
     </div> 
     <div className='details'>
     <Link to ={`/anime/${id}`} className="btn">
-      details
+      Details
     </Link>
     </div>
     </article>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../logo_transparent.png';
 const Navbar = () => {
   return (
-    <nav >
+    <nav className='navbar'>
     <div className='container'>
       <Link to='/'>
          <img src={logo} alt='logo' className='logo'></img>

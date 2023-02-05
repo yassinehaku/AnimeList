@@ -58,14 +58,16 @@ const SingleAnime = () => {
     genres,
   } = anime
   return (
-      <div>
+      <div className="TEST">
     <div className='section'>
+      <div className='singleanime'>
        <img src={images.jpg.image_url} alt='image'></img>
+       <div className='sa-info'>
             <p>
               <span className='animemenu'>Name :</span> {title}
             </p>
             <p>
-              <span className='animemenu'>Genres :</span> {genres[0].name+genres[1].name+genres[2].name+genres[3].name}
+              <span className='animemenu'>Genres :</span> {genres[0].name+" "+genres[1].name+" "+genres[2].name}
             </p>
             <p>
               <span className='animemenu'>Episodes :</span> {episodes}
@@ -79,8 +81,8 @@ const SingleAnime = () => {
             <p>
               <span className='animemenu'>Score :</span> {score}
             </p>
-            
-            
+        </div>     
+     </div>       
     </div>
       </div>
   )}

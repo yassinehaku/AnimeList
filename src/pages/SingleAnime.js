@@ -68,7 +68,7 @@ const SingleAnime = () => {
               <span className='animemenu'>Name :</span> {title}
             </p>
             <p>
-              <span className='animemenu'>Genres :</span> {genres[0].name+" "+genres[1].name+" "+genres[2].name}
+              <span className='animemenu'>Genres :</span> {genres.map(({name})) => name).join(', ')}
             </p>
             <p>
               <span className='animemenu'>Episodes :</span> {episodes}

@@ -13,6 +13,7 @@ const SingleAnime = () => {
       if (data){
        // console.log("data");
        // console.log(data);
+       
          const {
           title:title,
           images:images,

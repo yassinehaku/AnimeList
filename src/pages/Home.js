@@ -4,7 +4,7 @@ import AnimeList from '../components/AnimeList'
 import Pagination from '../components/Pagination'
 const Home = () => {
   return (
-    <div className='home'>
+    <div >
       <SearchForm />
       <AnimeList />
       <Pagination />

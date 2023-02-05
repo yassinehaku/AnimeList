@@ -1,5 +1,6 @@
 import React from 'react'
-const Anime = ({title,image,episodes,genres}) => {
+import { Link } from 'react-router-dom'
+const Anime = ({title,image,episodes,genres,id}) => {
   return (
     <article  className='anime'>
     <div className='image-container'>
@@ -9,6 +10,11 @@ const Anime = ({title,image,episodes,genres}) => {
     <h1>{title}</h1>
     <h4> {episodes} episodes</h4>
     <h4> genre {genres}</h4>
+    </div> 
+    <div className='details'>
+    <Link to ={`/anime/${id}`} className="btn">
+      Details
+    </Link>
     </div>
     </article>
   )

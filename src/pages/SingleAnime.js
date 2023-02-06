@@ -58,7 +58,7 @@ const SingleAnime = () => {
     genres,
   } = anime
   return (
-      <div className="TEST">
+      <div >
     <div className='section'>
       <div className='singleanime'>
        <img src={images.jpg.image_url} alt='image'></img>
@@ -67,7 +67,7 @@ const SingleAnime = () => {
               <span className='animemenu'>Name :</span> {title}
             </p>
             <p>
-              <span className='animemenu'>Genres :</span> {genres[0].name+" "+genres[1].name+" "+genres[2].name}
+              <span className='animemenu'>Genres :</span> {genres.map(({name}) => name).join(', ')}
             </p>
             <p>
               <span className='animemenu'>Episodes :</span> {episodes}

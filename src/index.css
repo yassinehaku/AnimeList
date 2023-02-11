@@ -107,6 +107,9 @@ PAGINATION
  font-family: fantasy;
  font-size: x-large;
 }
+.pagination button:active{
+  background-color: #fd7f32;
+}
 .searchform{
   margin-left: 60px;
   padding:2rem;

@@ -1,13 +1,13 @@
 import React from 'react'
 import SearchForm from '../components/SearchForm'
 import AnimeList from '../components/AnimeList'
-import Pagination from '../components/Pagination'
+import Paginate from '../components/Paginate'
 const Home = () => {
   return (
     <div >
       <SearchForm />
       <AnimeList />
-      <Pagination />
+      <Paginate />
     </div>
   )
 }

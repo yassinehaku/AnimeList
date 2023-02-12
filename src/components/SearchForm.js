@@ -1,10 +1,8 @@
 import React from 'react'
 import { useGlobalContext } from '../context'
 const SearchForm = () => {
-  const {setSearchTerm} = useGlobalContext()
-  const {setGenres} = useGlobalContext()
-  const {genres} = useGlobalContext()
-  const searchValue = React.useRef(''); 
+  const {setSearchTerm, setGenres, genres} = useGlobalContext()
+  const searchValue = React.useRef('');
   const handler = ()=>{
     setSearchTerm(searchValue.current.value)
   }

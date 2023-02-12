@@ -1,7 +1,9 @@
 import React from 'react'
 import { useGlobalContext } from '../context'
+import { useGenres } from '../use-genres'
 const SearchForm = () => {
-  const {setSearchTerm, setGenres, genres} = useGlobalContext()
+  const {setSearchTerm, setSelectedGenre} = useGlobalContext()
+  const genres = useGenres()
   const searchValue = React.useRef('');
   const handler = ()=>{
     setSearchTerm(searchValue.current.value)
@@ -20,11 +22,10 @@ const SearchForm = () => {
         </form>
       <div className='genres'>
         <label htmlFor='genres' >genres</label>
-        <select id="genres" name="genres" value={genres} className='input' onChange={(e) => setGenres(e.target.value) }>
-                <option value='action'>Action</option>
-                <option value='adventure'>Adventure</option>
-                <option value='comedy'>Comedy</option>
-                <option value='drama'>Drama</option>
+        <select id="genres" name="genres" className='input' onChange={(e) => setSelectedGenre(e.target.value) }>
+                {genres.map(({id, name}) => (
+                  <option value={id}>{name}</option>
+                ))}
          </select>
       </div>
     </section>

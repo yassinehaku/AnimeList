@@ -6,12 +6,12 @@ const AppProvider = ({children}) => {
     const [searchTerm,setSearchTerm]=useState('')
     const [page,setPage]=useState(1)
     const [animes,setAnimes]=useState([])
-    const [genres,setGenres]=useState('')
+    const [selectedGenre, setSelectedGenre]=useState(null)
     const [pagesCount, setPagesCount]=useState(1)
     const debounceSearchTerm = useDebounce(searchTerm,400);
     const fetchAnimes = async ()=>{
         try {
-        const params = new URLSearchParams({...(searchTerm ? {q: searchTerm}: undefined),genres:genres , limit:24, page , order_by:"favorites", sort:"desc" })
+        const params = new URLSearchParams({...(searchTerm ? {q: searchTerm}: undefined), ...(selectedGenre ? {genres: selectedGenre} : undefined),limit:24, page, order_by:"favorites", sort:"desc" })
         const response = await fetch(`${url}${params}`)
         /* console.log("here's the url");
         console.log(response); */
@@ -43,9 +43,9 @@ const AppProvider = ({children}) => {
     }
     useEffect(()=>{
         fetchAnimes()
-    },[searchTerm,page,genres,debounceSearchTerm])
+    },[searchTerm,page,debounceSearchTerm, selectedGenre])
     return(
-    <AppContext.Provider value={{setSearchTerm,animes,genres,setGenres,setPage,page, pagesCount}}>
+    <AppContext.Provider value={{setSearchTerm,animes,setPage,page, pagesCount, setSelectedGenre}}>
         {children}
     </AppContext.Provider>
 )

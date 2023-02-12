@@ -7,7 +7,7 @@ const AnimeList = () => {
   if (animes.length < 1) {
     return (
     <h2>
-      no animes matched 
+      no animes matched
     </h2>)
   }
   return (

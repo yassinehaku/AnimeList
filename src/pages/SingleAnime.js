@@ -32,7 +32,7 @@ const SingleAnime = () => {
          status,
          genres,
          }
-        console.log(newSAnime);
+        // console.log(newSAnime);
         setAnime(newSAnime)
       }
         else {
@@ -65,22 +65,22 @@ const SingleAnime = () => {
        <img src={images.jpg.image_url} alt='image'></img>
        <div className='sa-info'>
             <p>
-              <span className='animemenu'>Name :</span> {title}
+              <span className='animemenu'>Name </span> {title}
             </p>
             <p>
-              <span className='animemenu'>Genres :</span> {genres.map(({name}) => name).join(', ')}
+              <span className='animemenu'>Genres </span> {genres.map(({name}) => name).join(', ')}
             </p>
             <p>
-              <span className='animemenu'>Episodes :</span> {episodes}
+              <span className='animemenu'>Episodes </span> {episodes}
             </p>
             <p>
-              <span className='animemenu'>Status :</span> {status}
+              <span className='animemenu'>Status </span> {status}
             </p>
             <p>
-              <span className='animemenu'>Rating :</span> {rating}
+              <span className='animemenu'>Rating </span> {rating}
             </p>
             <p>
-              <span className='animemenu'>Score :</span> {score}
+              <span className='animemenu'>Score </span> {score}
             </p>
         </div>     
      </div>       

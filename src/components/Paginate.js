@@ -7,7 +7,7 @@ const handleChange =(page)=>{
   setPage(page)
 }
   return (
-<Pagination className='pagination' onChange={(e)=> handleChange(e.target.textContent) } count={pagesCount} color="secondary"></Pagination>
+<Pagination className='pagination' onChange={(e)=> handleChange(e.target.textContent) } count={pagesCount} color="primary"></Pagination>
 
   )
 }

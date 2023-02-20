@@ -2,8 +2,8 @@ import React from 'react'
 
 const Error = () => {
   return (
-    <div>
-      <h2>Error</h2>
+    <div className='section'>
+      <h2 style={{fontFamily:'Trebuchet MS'}}>Error: Link Doesn't exist</h2>
     </div>
   )
 }

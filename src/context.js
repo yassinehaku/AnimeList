@@ -1,5 +1,4 @@
 import React, {useState,useContext,useEffect} from "react";
-import useDebounce from "./components/useDebounce";
 const url='https://api.jikan.moe/v4/anime?'
 const AppContext=React.createContext();
 const AppProvider = ({children}) => {
@@ -8,7 +7,6 @@ const AppProvider = ({children}) => {
     const [animes,setAnimes]=useState([])
     const [selectedGenre, setSelectedGenre]=useState(null)
     const [pagesCount, setPagesCount]=useState(1)
-    const debounceSearchTerm = useDebounce(searchTerm,400);
     const fetchAnimes = async ()=>{
         try {
         const params = new URLSearchParams({...(searchTerm ? {q: searchTerm}: undefined), ...(selectedGenre ? {genres: selectedGenre} : undefined),limit:24, page, order_by:"favorites", sort:"desc" })
@@ -43,7 +41,7 @@ const AppProvider = ({children}) => {
     }
     useEffect(()=>{
         fetchAnimes()
-    },[searchTerm,page,debounceSearchTerm, selectedGenre])
+    },[searchTerm,page,selectedGenre])
     return(
     <AppContext.Provider value={{setSearchTerm,animes,setPage,page, pagesCount, setSelectedGenre}}>
         {children}

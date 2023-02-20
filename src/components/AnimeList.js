@@ -3,7 +3,7 @@ import Anime from './Anime'
 import { useGlobalContext } from '../context'
 const AnimeList = () => {
   const { animes }= useGlobalContext()
-  console.log(animes);
+  // console.log(animes);
   if (animes.length < 1) {
     return (
     <h2>

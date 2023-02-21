@@ -8,33 +8,40 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 const SearchForm = () => {
-  const {setSearchTerm, setSelectedGenre} = useGlobalContext()
+  const {setSearchTerm, setSelectedGenre,selectedGenre} = useGlobalContext()
   const genres = useGenres()
   const handleSubmit =(e)=>{
     e.preventDefault()
   }
+  const handleChange = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setSelectedGenre(value);
+  };
 
   return (
     <section className='searchform'>
       <form onSubmit={handleSubmit}>
         <div className='search' >
+          <Box sx={{minWidth: 200}}>
             <TextField  label="searchAnime" id="searchAnime" onChange={(e) => setSearchTerm(e.target.value) } />
+        </Box>
         </div>
         </form>
       <div className='genres' >
       <Box sx={{ minWidth: 250,backgroundColor:'#ffffff' }}>
       <FormControl fullWidth>
-      <InputLabel id="genres-label">Genre</InputLabel>
+      <InputLabel id="genres-select-label">Genre</InputLabel>
         <Select
-          labelId="genres-label"
-          id="genres"
-          value={ genres.map(({name}) => (name))}
-          label="Genre"
-          onChange={(e) => setSelectedGenre(e.target.value)}  
-          
+          labelId="genres-select-label"
+          id="genres-select"
+          value={selectedGenre}
+           label="Genre"
+           onChange={handleChange}     
         >
           {genres.map(({id, name}) => (
-                  <MenuItem value={id}>{name}</MenuItem>
+                  <MenuItem key={name} value={id}>{name}</MenuItem>
                 ))}
         </Select>
       </FormControl>

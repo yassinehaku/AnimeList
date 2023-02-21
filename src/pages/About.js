@@ -1,4 +1,3 @@
-import { Button } from '@mui/material'
 import React from 'react'
 
 const About = () => {
@@ -20,6 +19,7 @@ reactive user experience.
      <li>Context</li>
      <li>custom hooks</li>
      <li>Select and Text Field React components from Material UI</li>
+     <li>Netlify hosting</li>
    </ul>
    <form style={{margin:15,width:500}} action="https://github.com/yassinehaku/AnimeList">
     <button  type="submit" className='btn'>AnimeList repository on github</button>

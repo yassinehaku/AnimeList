@@ -22,13 +22,13 @@ const SearchForm = () => {
 
   return (
     <section className='searchform'>
-      <form onSubmit={handleSubmit}>
+      <form className='form' onSubmit={handleSubmit}>
         <div className='search' >
-          <Box sx={{minWidth: 200}}>
+          <Box >
             <TextField  label="searchAnime" id="searchAnime" onChange={(e) => setSearchTerm(e.target.value) } />
         </Box>
         </div>
-        </form>
+        
       <div className='genres' >
       <Box sx={{ minWidth: 250,backgroundColor:'#ffffff' }}>
       <FormControl fullWidth>
@@ -47,7 +47,7 @@ const SearchForm = () => {
       </FormControl>
       </Box>
       </div>
-
+      </form>
     </section>
   )
 }

@@ -31,8 +31,7 @@ margin:0.5rem;
 }
 .nav-links{
   display: flex;
-  align-items: center;
-}
+} 
 .nav-links a{
   padding: 3rem 3rem;
   font-size: 1.5rem;
@@ -42,6 +41,20 @@ nav a{
   text-decoration:none;
   color:azure;
 } 
+@media screen and (max-width: 900px){
+.container{
+  width: max-content;
+}
+.search {
+   width: 100%; 
+}
+}
+@media screen and (min-width: 900px){
+  .form{ 
+    display:flex;
+  }
+  }
+
 /* 
 ==========
 ANIME LIST

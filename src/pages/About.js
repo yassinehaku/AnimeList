@@ -21,7 +21,7 @@ reactive user experience.
      <li>Select and Text Field React components from Material UI</li>
      <li>Netlify hosting</li>
    </ul>
-   <form style={{margin:15,width:500}} action="https://github.com/yassinehaku/AnimeList">
+   <form action="https://github.com/yassinehaku/AnimeList">
     <button  type="submit" className='btn'>AnimeList repository on github</button>
    </form>
    </div>

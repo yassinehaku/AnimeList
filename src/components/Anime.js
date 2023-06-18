@@ -4,7 +4,9 @@ const Anime = ({title,image,episodes,genres,id}) => {
   return (
     <article  className='anime'>
     <div className='image-container'>
-    <img src={image} alt={title} />
+     <Link to ={`/anime/${id}`} >
+     <img src={image} alt={title} />
+     </Link>
     </div>
     <div className='description'>
     <h1>{title}</h1>

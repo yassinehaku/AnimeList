@@ -9,7 +9,7 @@ const AppProvider = ({children}) => {
     const [pagesCount, setPagesCount]=useState(1)
     const fetchAnimes = async ()=>{
         try {
-        const params = new URLSearchParams({...(searchTerm ? {q: searchTerm}: undefined), ...(selectedGenre ? {genres: selectedGenre} : undefined),limit:24, page, order_by:"favorites", sort:"desc" })
+        const params = new URLSearchParams({...(searchTerm ? {q: searchTerm}: undefined), ...(selectedGenre ? {genres: selectedGenre} : undefined),limit:24, page, order_by:"favorites", sort:"asc" })
         const response = await fetch(`${url}${params}`)
         /* console.log("here's the url");
         console.log(response); */

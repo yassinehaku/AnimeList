@@ -155,7 +155,11 @@ select{
 input{
   color:rgb(59, 57, 57);
 }
-
+/* 
+==========
+ANIME DETAILS
+==========
+*/
  .animemenu{
   color: #1c326a;
   background-color: #fd7f32 ;
@@ -182,11 +186,6 @@ input{
   border-color: azure;
   color:   #fd7f32;
 }
-/* 
-==========
-ANIME DETAILS
-==========
-*/
 .section{
   margin: auto;
   margin-top: 45px;
